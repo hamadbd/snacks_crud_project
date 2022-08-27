@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="" method="POST">
+    {% csrf_token %}
+    
+    {{ form.as_p }}
+    <p> Are You Sure you want to cancel order "{{ snack.title }}" ?</p>
+    <input type="submit" value ='Yes'>
+</form>
+{% endblock content %}
